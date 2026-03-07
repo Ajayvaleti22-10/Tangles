@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { Container } from '@/components/container';
 import { SectionHeader } from '@/components/section-header';
 import { Button } from '@/components/ui/button';
@@ -25,6 +26,7 @@ export function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
   const [errorMessage, setErrorMessage] = useState('');
   const lastSubmitTime = useRef(0);
@@ -34,6 +36,12 @@ export function Contact() {
 
     const now = Date.now();
     if (now - lastSubmitTime.current < SUBMIT_COOLDOWN_MS && status === 'success') {
+      return;
+    }
+
+    if (!acceptedTerms) {
+      setStatus('error');
+      setErrorMessage('You must accept the Terms & Conditions before submitting.');
       return;
     }
 
@@ -76,7 +84,9 @@ export function Contact() {
           message: safeMessage,
           subject: `${site.name} – Contact form: ${safeName}`,
           from_name: site.name,
-          botcheck: '', // honeypot: leave empty; bots often fill it
+          botcheck: '',
+          terms_accepted: 'Yes',
+          terms_accepted_at: new Date().toISOString(),
         }),
       });
       const data = await res.json();
@@ -85,6 +95,7 @@ export function Contact() {
         setName('');
         setEmail('');
         setMessage('');
+        setAcceptedTerms(false);
       } else {
         setStatus('error');
         setErrorMessage(data.message || 'Something went wrong. Please try again.');
@@ -215,6 +226,24 @@ export function Contact() {
                   disabled={status === 'sending'}
                   autoComplete="off"
                 />
+              </div>
+
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="accept-terms"
+                  checked={acceptedTerms}
+                  onChange={(e) => setAcceptedTerms(e.target.checked)}
+                  disabled={status === 'sending'}
+                  className="mt-1 h-4 w-4 rounded border-ink-300 text-blush-600 focus:ring-blush-500"
+                />
+                <label htmlFor="accept-terms" className="text-sm text-ink-700">
+                  I have read and accept the{' '}
+                  <Link href="/terms" className="font-medium text-blush-600 underline hover:text-blush-700" target="_blank" rel="noopener noreferrer">
+                    Terms &amp; Conditions
+                  </Link>
+                  . I understand that my submission is subject to those terms.
+                </label>
               </div>
 
               {status === 'success' && (

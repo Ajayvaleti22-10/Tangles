@@ -10,7 +10,6 @@ import { cn } from '@/lib/utils';
 
 const links = [
   { label: 'Services', href: '/services' },
-  { label: 'Team', href: '/team' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Contact', href: '/contact' }
@@ -43,10 +42,10 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className={cn('sticky top-0 z-50 transition', scrolled && 'backdrop-blur bg-white/80 border-b border-ink-100')}>
+    <header className={cn('sticky top-0 z-50 transition', scrolled && 'backdrop-blur bg-white/90 border-b border-blush-100 shadow-sm')}>
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink-900 text-white shadow-soft">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blush-500 to-violet-600 text-white shadow-soft">
             <Sparkles className="h-5 w-5" />
           </span>
           <span className="font-semibold tracking-tight text-ink-900">{site.name}</span>
@@ -57,7 +56,7 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-ink-700 hover:text-ink-900 transition"
+              className="text-sm text-ink-700 hover:text-blush-600 transition"
             >
               {l.label}
             </Link>
@@ -90,13 +89,13 @@ export function Navbar() {
         <Container className="pt-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-ink-900 text-white shadow-soft">
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blush-500 to-violet-600 text-white shadow-soft">
                 <Sparkles className="h-5 w-5" />
               </span>
               <span className="font-semibold tracking-tight text-ink-900">{site.name}</span>
             </Link>
             <button
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-ink-200 bg-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-blush-200 bg-white"
               aria-label="Close menu"
               onClick={() => setOpen(false)}
             >
@@ -109,7 +108,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="rounded-2xl px-4 py-4 text-base font-medium text-ink-900 hover:bg-ink-50"
+                className="rounded-2xl px-4 py-4 text-base font-medium text-ink-900 hover:bg-blush-50"
                 onClick={() => setOpen(false)}
               >
                 {l.label}

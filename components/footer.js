@@ -4,7 +4,7 @@ import { Instagram, MapPin, Phone, Mail } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink-100 bg-white">
+    <footer className="border-t border-blush-100 bg-gradient-to-b from-white to-blush-50/30">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
@@ -52,9 +52,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-t border-ink-100 pt-8">
           <p className="text-xs text-ink-600">© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <p className="text-xs text-ink-600">Built with Next.js + Tailwind.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-600">
+            <a href="/terms" className="hover:text-blush-600 underline">Terms &amp; Conditions</a>
+            <span>Built with Next.js + Tailwind.</span>
+          </div>
         </div>
       </Container>
     </footer>
