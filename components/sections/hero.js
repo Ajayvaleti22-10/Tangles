@@ -52,7 +52,7 @@ export function Hero() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button href={site.booking.url} size="lg">Book an appointment</Button>
-              <Button variant="secondary" href="#services" size="lg">Explore services</Button>
+              <Button variant="secondary" href="/services" size="lg">Explore services</Button>
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2 max-w-xl">

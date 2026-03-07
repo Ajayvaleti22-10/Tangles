@@ -9,11 +9,11 @@ import { site } from '@/data/site';
 import { cn } from '@/lib/utils';
 
 const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Team', href: '#team' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'Services', href: '/services' },
+  { label: 'Team', href: '/team' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Contact', href: '/contact' }
 ];
 
 export function Navbar() {
@@ -54,13 +54,13 @@ export function Navbar() {
 
         <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm text-ink-700 hover:text-ink-900 transition"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -106,14 +106,14 @@ export function Navbar() {
 
           <div className="mt-10 flex flex-col gap-2">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="rounded-2xl px-4 py-4 text-base font-medium text-ink-900 hover:bg-ink-50"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -124,9 +124,6 @@ export function Navbar() {
             <Button href={site.booking.url}>Book now</Button>
           </div>
 
-          <p className="mt-10 text-xs text-ink-600">
-            Tip: replace the booking link in <span className="font-mono">data/site.js</span> to connect Fresha, Vagaro, Square, etc.
-          </p>
         </Container>
       </div>
     </header>
