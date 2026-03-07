@@ -5,7 +5,7 @@ import { Gallery } from '@/components/sections/gallery';
 
 export const metadata = {
   title: 'Gallery',
-  description: 'Our work—cuts, color, and styling. Real results from Heavenly Cuts.'
+  description: 'Our work—cuts, color, and styling. Real results from Tangles.'
 };
 
 export default function GalleryPage() {

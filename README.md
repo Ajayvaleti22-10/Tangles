@@ -1,4 +1,4 @@
-# Heavenly Cuts — Website
+# Tangles — Website
 
 A clean, multi-page salon website built with **Next.js (App Router)** + **Tailwind CSS**. Contact form powered by **Web3Forms**.
 

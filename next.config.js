@@ -15,7 +15,7 @@ const ContentSecurityPolicy = [
 ].join('; ');
 
 /**
- * Heavenly Cuts — Next.js config
+ * Tangles — Next.js config
  * - Security headers (CSP, HSTS, etc.)
  * - Caching for static assets and build output
  */

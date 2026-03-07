@@ -1,10 +1,10 @@
 export const site = {
-  name: 'Heavenly Cuts',
+  name: 'Tangles',
   tagline: 'Modern hair studio for effortless confidence.',
   description:
-    'Heavenly Cuts is a boutique hair salon focused on precision cuts, dimensional color, and healthy hair. Book in minutes and leave feeling brand new.',
+    'Tangles is a boutique hair salon focused on precision cuts, dimensional color, and healthy hair. Book in minutes and leave feeling brand new.',
   phone: '(555) 123-4567',
-  email: 'hello@heavenlycuts.com',
+  email: 'hello@tangles.com',
   address: '123 Cloud Nine Ave, Chicago, IL',
   hours: [
     { day: 'Mon', hours: 'Closed' },

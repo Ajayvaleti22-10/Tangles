@@ -21,7 +21,10 @@ export function CTA() {
             >
               Book now
             </Button>
-            <Button href="/contact" variant="secondary" className="border-white/50 text-white hover:bg-white/20">
+            <Button
+              href="/contact"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blush-700 shadow-none"
+            >
               Contact us
             </Button>
           </div>
