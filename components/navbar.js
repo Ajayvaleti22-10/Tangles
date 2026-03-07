@@ -9,6 +9,7 @@ import { site } from '@/data/site';
 import { cn } from '@/lib/utils';
 
 const links = [
+  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Pricing', href: '/pricing' },
