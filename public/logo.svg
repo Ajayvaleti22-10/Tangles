@@ -1,14 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
   <title id="title">Tangles Salon Logo</title>
-  <desc id="desc">Scissor icon with Tangles Salon wordmark.</desc>
+  <desc id="desc">Tangles Salon wordmark with scissor symbol.</desc>
   <rect width="360" height="96" fill="none"/>
-  <g transform="translate(8 48)" fill="#111111">
-    <circle cx="10" cy="-8" r="5"/>
-    <circle cx="10" cy="8" r="5"/>
-    <path d="M15 -7 L35 -20" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
-    <path d="M15 7 L35 20" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
-    <path d="M20 -2 L38 2" stroke="#111111" stroke-width="3" stroke-linecap="round"/>
-  </g>
-  <text x="58" y="54" fill="#111111" font-size="54" font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="-1.2">Tangles</text>
-  <text x="276" y="66" fill="#111111" font-size="30" font-family="Georgia, 'Times New Roman', serif" font-weight="500">Salon</text>
+  <text x="18" y="28" fill="#111111" font-size="20" font-family="Georgia, 'Times New Roman', serif">✂</text>
+  <text x="18" y="62" fill="#111111" font-size="62" font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="-1.5">Tangles</text>
+  <text x="246" y="80" fill="#111111" font-size="42" font-family="Georgia, 'Times New Roman', serif" font-weight="500" letter-spacing="-0.4">Salon</text>
 </svg>
