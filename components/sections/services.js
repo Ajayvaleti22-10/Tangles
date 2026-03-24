@@ -38,7 +38,7 @@ export function Services() {
 
         <div className="mt-10 rounded-3xl border border-ink-100 bg-white p-6 shadow-soft">
           <p className="text-sm text-ink-700">
-            Not sure what to book? Choose <span className="font-medium text-ink-900">Signature Haircut</span> and leave a note—we’ll confirm the best fit during your consultation.
+            Not sure what to book? Choose <span className="font-medium text-ink-900">Haircut</span> and leave a note—we’ll confirm the best fit during your consultation.
           </p>
         </div>
       </Container>

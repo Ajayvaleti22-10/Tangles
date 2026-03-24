@@ -1,3 +1,6 @@
+/** Used for display and Google Maps links — keep in sync */
+const SALON_ADDRESS = '1703 B Ave N.W, Cedar Rapids, IA';
+
 export const site = {
   name: 'Tangles Salon',
   tagline: 'Modern hair studio for effortless confidence.',
@@ -7,7 +10,7 @@ export const site = {
   phone: '319-363-6500',
   /** Single tel: link for all “call to book” buttons (E.164 after tel:) */
   phoneTel: 'tel:+13193636500',
-  address: '1703 B Ave N.W, Cedar Rapids, IA',
+  address: SALON_ADDRESS,
   hours: [
     { day: 'Mon', hours: '9:30 AM – 7:00 PM' },
     { day: 'Tue', hours: '9:30 AM – 7:00 PM' },
@@ -20,38 +23,48 @@ export const site = {
   socials: {
     instagram: 'https://instagram.com/',
     tiktok: 'https://tiktok.com/',
-    googleMaps: 'https://maps.google.com/'
+    /** Opens Google Maps with directions to the salon */
+    googleMaps: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SALON_ADDRESS)}`
   },
   services: [
     {
-      title: 'Signature Haircut',
+      title: 'Haircut',
       duration: '45–60 min',
-      priceFrom: 55,
+      priceFrom: 25,
       description: 'Consultation, wash, precision cut, and finish—tailored to your texture.'
     },
     {
-      title: 'Blowout & Style',
-      duration: '30–45 min',
-      priceFrom: 40,
-      description: 'Smooth, bouncy, or beachy—choose your vibe and we’ll do the rest.'
-    },
-    {
-      title: 'Color Refresh',
+      title: 'Color refresh',
       duration: '90–120 min',
-      priceFrom: 95,
+      priceFrom: 55,
       description: 'Root touch-up or all-over color with shine-enhancing treatment.'
     },
     {
       title: 'Highlights',
       duration: '2–3 hrs',
-      priceFrom: 160,
-      description: 'Dimensional color placed to flatter your features and grow out beautifully.'
+      priceFrom: 50,
+      description: 'Dimensional lightening placed to flatter your features and grow out beautifully.'
     },
     {
-      title: 'Eyebrow Waxing',
+      title: 'Color highlights',
+      duration: '2–3 hrs',
+      priceFrom: 75,
+      description: 'Rich color plus highlights for depth and dimension—customized to your look.'
+    },
+    {
+      title: 'Eyebrow waxing',
       duration: '15–20 min',
-      priceFrom: 18,
+      priceFrom: 15,
       description: 'Clean shaping and definition with a gentle wax—perfect on its own or with your hair service.'
+    },
+    {
+      title: 'Extra length',
+      duration: 'Add-on',
+      /** No fixed price — shown as text on pricing page */
+      priceFrom: null,
+      priceLabel: 'Varies by length',
+      description:
+        'Longer hair may require more time and product. Price depends on length—we’ll quote at your appointment.'
     }
   ],
   team: [

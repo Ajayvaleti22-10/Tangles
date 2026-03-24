@@ -11,7 +11,10 @@ export function Pricing() {
   const rows = site.services.map((s) => ({
     name: s.title,
     duration: s.duration,
-    price: `from $${s.priceFrom}`
+    price:
+      s.priceFrom != null && s.priceFrom !== undefined
+        ? `$${s.priceFrom}`
+        : s.priceLabel || '—'
   }));
 
   return (
@@ -20,7 +23,7 @@ export function Pricing() {
         <SectionHeader
           eyebrow="Pricing"
           title="Simple, transparent pricing"
-          description="Final price can vary by length/thickness and product choice. We’ll confirm everything before we start."
+          description="Listed prices are starting rates. Extra length has no fixed price—it depends on length (quoted in salon). We’ll confirm everything before we start."
         />
 
         <div className="mt-10 overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-soft">
