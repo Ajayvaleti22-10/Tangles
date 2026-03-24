@@ -8,6 +8,7 @@ import { Container } from '@/components/container';
 import { Button } from '@/components/ui/button';
 import { site } from '@/data/site';
 import { cn } from '@/lib/utils';
+import { useBookAppointment } from '@/components/book-appointment-provider';
 
 const links = [
   { label: 'Home', href: '/' },
@@ -18,6 +19,7 @@ const links = [
 ];
 
 export function Navbar() {
+  const { openModal: openBookModal } = useBookAppointment();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -63,10 +65,12 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="secondary" href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>
+          <Button variant="secondary" href={site.phoneTel}>
             Call
           </Button>
-          <Button href={site.booking.url}>Book now</Button>
+          <Button type="button" onClick={openBookModal}>
+            Book an appointment
+          </Button>
         </div>
 
         <button
@@ -113,10 +117,18 @@ export function Navbar() {
           </div>
 
           <div className="mt-10 grid gap-3">
-            <Button variant="secondary" href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>
+            <Button variant="secondary" href={site.phoneTel}>
               Call {site.phone}
             </Button>
-            <Button href={site.booking.url}>Book now</Button>
+            <Button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                openBookModal();
+              }}
+            >
+              Book an appointment
+            </Button>
           </div>
 
         </Container>

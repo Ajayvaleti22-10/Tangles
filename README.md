@@ -16,14 +16,13 @@ Open http://localhost:3000
 ## Customize
 
 All business info lives in:
-- `data/site.js` (name, phone, address, hours, services, team, testimonials, FAQ, booking link)
+- `data/site.js` (name, phone, `phoneTel`, address, hours, services, team, testimonials, FAQ)
 
-### Replace booking link
+**Contact & booking (simple setup):**
+- **Messages**: contact form → [Web3Forms](https://web3forms.com) (set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` in `.env.local`).
+- **Book an appointment**: opens a dialog with **Call us** (`phoneTel` in `data/site.js`) or **Fill out the form** (goes to `/contact#callback-form` for a callback). The navbar still has a direct **Call** button.
 
-In `data/site.js` update:
-- `booking.url`
-
-You can point this to booking platforms like **Fresha**, **Vagaro**, or **Square**.
+Optional: set `NEXT_PUBLIC_SITE_URL` in `.env.local` to your live site URL (used for metadata / Open Graph).
 
 ### Add real photos
 

@@ -1,9 +1,13 @@
+'use client';
+
 import { Container } from '@/components/container';
 import { SectionHeader } from '@/components/section-header';
 import { Button } from '@/components/ui/button';
 import { site } from '@/data/site';
+import { useBookAppointment } from '@/components/book-appointment-provider';
 
 export function Pricing() {
+  const { openModal } = useBookAppointment();
   const rows = site.services.map((s) => ({
     name: s.title,
     duration: s.duration,
@@ -41,7 +45,9 @@ export function Pricing() {
             <p className="font-semibold text-ink-900">Want a full transformation?</p>
             <p className="mt-1 text-sm text-ink-700">Book a consultation first—we’ll create a plan for your hair goals.</p>
           </div>
-          <Button href={site.booking.url}>Book consultation</Button>
+          <Button type="button" onClick={openModal}>
+            Book an appointment
+          </Button>
         </div>
       </Container>
     </section>

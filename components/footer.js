@@ -1,7 +1,7 @@
 import { Container } from '@/components/container';
 import { site } from '@/data/site';
 import Image from 'next/image';
-import { Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Instagram, MapPin, Phone } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -21,11 +21,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3 text-sm text-ink-700">
               <Phone className="h-4 w-4" />
-              <a className="hover:text-ink-900" href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>{site.phone}</a>
-            </div>
-            <div className="flex items-center gap-3 text-sm text-ink-700">
-              <Mail className="h-4 w-4" />
-              <a className="hover:text-ink-900" href={`mailto:${site.email}`}>{site.email}</a>
+              <a className="hover:text-ink-900" href={site.phoneTel}>{site.phone}</a>
             </div>
           </div>
 

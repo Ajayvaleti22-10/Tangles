@@ -2,9 +2,11 @@ export const site = {
   name: 'Tangles Salon',
   tagline: 'Modern hair studio for effortless confidence.',
   description:
-    'Tangles is a boutique hair salon focused on precision cuts, dimensional color, and healthy hair. Book in minutes and leave feeling brand new.',
+    'Tangles is a boutique hair salon focused on precision cuts, dimensional color, and healthy hair. Call to book or reach out through our contact form.',
+  /** Display format */
   phone: '319-363-6500',
-  email: 'hello@tangles.com',
+  /** Single tel: link for all “call to book” buttons (E.164 after tel:) */
+  phoneTel: 'tel:+13193636500',
   address: '1703 B Ave N.W, Cedar Rapids, IA',
   hours: [
     { day: 'Mon', hours: '9:30 AM – 7:00 PM' },
@@ -19,10 +21,6 @@ export const site = {
     instagram: 'https://instagram.com/',
     tiktok: 'https://tiktok.com/',
     googleMaps: 'https://maps.google.com/'
-  },
-  booking: {
-    // Replace with your Fresha/Vagaro/Square booking link.
-    url: 'https://example.com/book'
   },
   services: [
     {
@@ -48,6 +46,12 @@ export const site = {
       duration: '2–3 hrs',
       priceFrom: 160,
       description: 'Dimensional color placed to flatter your features and grow out beautifully.'
+    },
+    {
+      title: 'Eyebrow Waxing',
+      duration: '15–20 min',
+      priceFrom: 18,
+      description: 'Clean shaping and definition with a gentle wax—perfect on its own or with your hair service.'
     }
   ],
   team: [
@@ -81,7 +85,7 @@ export const site = {
     {
       name: 'Chris D.',
       quote:
-        'Fast, clean fade and the beard lineup was perfect. Online booking made it easy.'
+        'Fast, clean fade and the beard lineup was perfect. Called ahead and got right in.'
     }
   ],
   faqs: [

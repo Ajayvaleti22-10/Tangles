@@ -29,7 +29,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-ink-900 mt-8 mb-2">3. Bookings, Cancellations &amp; No-Shows</h2>
-            <p>Appointments may be made via our booking link or by contacting us. You agree to cancel or reschedule at least 24 hours in advance when possible. We reserve the right to charge a fee for late cancellations or no-shows, and to refuse future bookings if such behavior continues. We may cancel or reschedule appointments due to unforeseen circumstances and will attempt to notify you.</p>
+            <p>Appointments may be made by phone or by messaging us through the contact form on this website. You agree to cancel or reschedule at least 24 hours in advance when possible. We reserve the right to charge a fee for late cancellations or no-shows, and to refuse future bookings if such behavior continues. We may cancel or reschedule appointments due to unforeseen circumstances and will attempt to notify you.</p>
           </section>
 
           <section>
@@ -49,7 +49,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-ink-900 mt-8 mb-2">7. Third-Party Links</h2>
-            <p>This website may contain links to third-party sites (e.g. booking platforms, social media). We are not responsible for the content or practices of those sites. Your use of them is at your own risk.</p>
+            <p>This website may contain links to third-party sites (e.g. maps, social media). We are not responsible for the content or practices of those sites. Your use of them is at your own risk.</p>
           </section>
 
           <section>
@@ -74,7 +74,7 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-ink-900 mt-8 mb-2">12. Contact</h2>
-            <p>For questions about these Terms and Conditions, contact us at {site.email} or {site.phone}.</p>
+            <p>For questions about these Terms and Conditions, contact us through the Contact page on this website or call {site.phone}.</p>
           </section>
         </div>
       </Container>

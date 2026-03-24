@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { site } from '@/data/site';
-import { Calendar, MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -114,31 +114,19 @@ export function Contact() {
             <SectionHeader
               eyebrow="Contact"
               title="Let’s get you booked"
-              description="Use the quick actions or send a message. For fastest booking, use the Book Now button."
+              description="Call to schedule, or send us a message with the form below."
             />
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <a
                 className="flex items-center gap-3 rounded-3xl border border-ink-100 bg-white p-5 shadow-soft hover:bg-ink-50"
-                href={site.booking.url}
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-white">
-                  <Calendar className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="font-semibold text-ink-900">Book online</p>
-                  <p className="text-sm text-ink-700">Pick a service & time</p>
-                </div>
-              </a>
-              <a
-                className="flex items-center gap-3 rounded-3xl border border-ink-100 bg-white p-5 shadow-soft hover:bg-ink-50"
-                href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}
+                href={site.phoneTel}
               >
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-white">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="font-semibold text-ink-900">Call</p>
+                  <p className="font-semibold text-ink-900">Call to book</p>
                   <p className="text-sm text-ink-700">{site.phone}</p>
                 </div>
               </a>
@@ -156,18 +144,6 @@ export function Contact() {
                   <p className="text-sm text-ink-700">Open in Maps</p>
                 </div>
               </a>
-              <a
-                className="flex items-center gap-3 rounded-3xl border border-ink-100 bg-white p-5 shadow-soft hover:bg-ink-50"
-                href={`mailto:${site.email}`}
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-white">
-                  <Mail className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="font-semibold text-ink-900">Email</p>
-                  <p className="text-sm text-ink-700">{site.email}</p>
-                </div>
-              </a>
             </div>
 
             <div className="mt-10 rounded-3xl border border-ink-100 bg-ink-50/60 p-6">
@@ -183,10 +159,10 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-ink-100 bg-white p-6 shadow-soft">
+          <div id="callback-form" className="rounded-3xl border border-ink-100 bg-white p-6 shadow-soft scroll-mt-24">
             <p className="text-sm font-semibold text-ink-900">Send a message</p>
             <p className="mt-1 text-sm text-ink-700">
-              We’ll get back to you as soon as we can. For fastest booking, use the Book Now button above.
+              We’ll get back to you as soon as we can. To book by phone, use Call to book above.
             </p>
 
             <form className="mt-6 grid gap-4" onSubmit={onSubmit}>
@@ -261,9 +237,6 @@ export function Contact() {
                 <Button type="submit" disabled={status === 'sending'}>
                   {status === 'sending' ? 'Sending…' : 'Send message'}
                 </Button>
-                <p className="text-xs text-ink-600">
-                  Or email us at <a className="underline hover:text-ink-900" href={`mailto:${site.email}`}>{site.email}</a>.
-                </p>
               </div>
             </form>
           </div>

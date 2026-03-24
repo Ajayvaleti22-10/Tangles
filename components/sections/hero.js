@@ -1,13 +1,17 @@
+'use client';
+
 import Image from 'next/image';
 import { Container } from '@/components/container';
 import { Button } from '@/components/ui/button';
 import { site } from '@/data/site';
+import { useBookAppointment } from '@/components/book-appointment-provider';
 import { CheckCircle2, Star } from 'lucide-react';
 
 // Unsplash (free to use, no attribution required per Unsplash License)
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80';
 
 export function Hero() {
+  const { openModal } = useBookAppointment();
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blush-50 via-white to-teal-50/60">
       <Container className="relative py-14 sm:py-20">
@@ -15,7 +19,7 @@ export function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-blush-200 bg-blush-100/80 px-4 py-2">
               <Star className="h-4 w-4 text-blush-600" />
-              <p className="text-xs font-medium text-ink-800">Top-rated local studio • Easy online booking</p>
+              <p className="text-xs font-medium text-ink-800">Top-rated local studio • Call to book</p>
             </div>
 
             <h1 className="mt-6 text-4xl sm:text-5xl font-semibold tracking-tight text-ink-900">
@@ -26,7 +30,9 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button href={site.booking.url} size="lg">Book an appointment</Button>
+              <Button type="button" onClick={openModal} size="lg">
+                Book an appointment
+              </Button>
               <Button variant="secondary" href="/services" size="lg">Explore services</Button>
             </div>
 
