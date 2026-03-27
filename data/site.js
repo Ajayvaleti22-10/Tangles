@@ -26,6 +26,14 @@ export const site = {
     /** Opens Google Maps with directions to the salon */
     googleMaps: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SALON_ADDRESS)}`
   },
+  /**
+   * Stylist chair rental — set showPromo to false when both chairs are filled.
+   */
+  chairRent: {
+    showPromo: true,
+    availableChairs: 2,
+    pricePerChairPerMonth: 500
+  },
   services: [
     {
       title: 'Haircut',
@@ -48,7 +56,7 @@ export const site = {
     {
       title: 'Color highlights',
       duration: '2–3 hrs',
-      priceFrom: 75,
+      priceFrom: 65,
       description: 'Rich color plus highlights for depth and dimension—customized to your look.'
     },
     {
@@ -76,7 +84,7 @@ export const site = {
     {
       name: 'Mia Rivers',
       role: 'Color Specialist',
-      bio: 'Balayage, blonding, and dimensional color with a healthy-hair-first approach.'
+      bio: 'Highlights, blonding, and dimensional color with a healthy-hair-first approach.'
     },
     {
       name: 'Noah Kim',

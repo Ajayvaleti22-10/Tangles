@@ -5,7 +5,7 @@ import { Gallery } from '@/components/sections/gallery';
 
 export const metadata = {
   title: 'Gallery',
-  description: 'Our work—cuts, color, and styling. Real results from Tangles.'
+  description: 'A look inside Tangles Salon in Cedar Rapids—our space, stations, and atmosphere.'
 };
 
 export default function GalleryPage() {

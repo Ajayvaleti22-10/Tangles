@@ -6,9 +6,7 @@ import { Button } from '@/components/ui/button';
 import { site } from '@/data/site';
 import { useBookAppointment } from '@/components/book-appointment-provider';
 import { CheckCircle2, Star } from 'lucide-react';
-
-// Unsplash (free to use, no attribution required per Unsplash License)
-const HERO_IMAGE = 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80';
+import { heroSalonImage } from '@/data/salon-photos';
 
 export function Hero() {
   const { openModal } = useBookAppointment();
@@ -54,8 +52,8 @@ export function Hero() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl border-2 border-white/80 shadow-soft shadow-blush-200/30 ring-2 ring-blush-100">
               <Image
-                src={HERO_IMAGE}
-                alt="Hair salon – professional styling in a welcoming space"
+                src={heroSalonImage}
+                alt="Tangles Salon styling station with mirror, teal accent wall, and professional chair"
                 width={900}
                 height={600}
                 priority
