@@ -18,7 +18,10 @@ export function Pricing() {
   }));
 
   return (
-    <section id="pricing" className="bg-ink-50/60 border-y border-ink-100">
+    <section
+      id="pricing"
+      className="border-y border-violet-100/80 bg-gradient-to-b from-violet-50/70 via-white to-coral-50/40"
+    >
       <Container className="py-14 sm:py-20">
         <SectionHeader
           eyebrow="Pricing"
@@ -26,24 +29,29 @@ export function Pricing() {
           description="Listed prices are starting rates. Extra length has no fixed price—it depends on length (quoted in salon). We’ll confirm everything before we start."
         />
 
-        <div className="mt-10 overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-soft">
-          <div className="grid grid-cols-3 gap-0 border-b border-ink-100 bg-ink-50/70 px-6 py-4 text-xs font-semibold uppercase tracking-widest text-ink-700">
+        <div className="mt-10 overflow-hidden rounded-3xl border-2 border-blush-200 bg-white/95 shadow-soft backdrop-blur-sm">
+          <div className="grid grid-cols-3 gap-0 border-b border-blush-100 bg-gradient-to-r from-blush-100/90 via-violet-100/70 to-teal-100/60 px-6 py-4 text-xs font-semibold uppercase tracking-widest text-ink-800">
             <span>Service</span>
             <span>Time</span>
             <span className="text-right">Price</span>
           </div>
           <ul>
-            {rows.map((r) => (
-              <li key={r.name} className="grid grid-cols-3 gap-0 px-6 py-4 text-sm text-ink-800 border-b border-ink-100 last:border-0">
+            {rows.map((r, i) => (
+              <li
+                key={r.name}
+                className={`grid grid-cols-3 gap-0 px-6 py-4 text-sm text-ink-800 border-b border-blush-100/60 last:border-0 ${
+                  i % 2 === 0 ? 'bg-white' : 'bg-blush-50/40'
+                }`}
+              >
                 <span className="font-medium text-ink-900">{r.name}</span>
                 <span className="text-ink-700">{r.duration}</span>
-                <span className="text-right text-ink-700">{r.price}</span>
+                <span className="text-right font-medium text-blush-800">{r.price}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-3xl border border-ink-100 bg-white p-6 shadow-soft">
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-3xl border-2 border-teal-200 bg-gradient-to-br from-teal-50/70 to-white p-6 shadow-soft">
           <div>
             <p className="font-semibold text-ink-900">Want a full transformation?</p>
             <p className="mt-1 text-sm text-ink-700">Book a consultation first—we’ll create a plan for your hair goals.</p>

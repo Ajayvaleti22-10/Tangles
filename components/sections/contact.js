@@ -107,7 +107,10 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-white">
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-blush-50/80 via-white to-violet-50/50"
+    >
       <Container className="py-14 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
@@ -119,10 +122,10 @@ export function Contact() {
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <a
-                className="flex items-center gap-3 rounded-3xl border border-ink-100 bg-white p-5 shadow-soft hover:bg-ink-50"
+                className="flex items-center gap-3 rounded-3xl border-2 border-blush-200 bg-gradient-to-br from-blush-50/90 to-white p-5 shadow-soft transition hover:border-blush-300 hover:shadow-md"
                 href={site.phoneTel}
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-white">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-blush-500 to-blush-700 text-white shadow-soft">
                   <Phone className="h-5 w-5" />
                 </span>
                 <div>
@@ -131,12 +134,12 @@ export function Contact() {
                 </div>
               </a>
               <a
-                className="flex items-center gap-3 rounded-3xl border border-ink-100 bg-white p-5 shadow-soft hover:bg-ink-50"
+                className="flex items-center gap-3 rounded-3xl border-2 border-teal-200 bg-gradient-to-br from-teal-50/90 to-white p-5 shadow-soft transition hover:border-teal-300 hover:shadow-md"
                 href={site.socials.googleMaps}
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-white">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700 text-white shadow-soft">
                   <MapPin className="h-5 w-5" />
                 </span>
                 <div>
@@ -146,7 +149,7 @@ export function Contact() {
               </a>
             </div>
 
-            <div className="mt-10 rounded-3xl border border-ink-100 bg-ink-50/60 p-6">
+            <div className="mt-10 rounded-3xl border-2 border-violet-200 bg-gradient-to-br from-violet-50/80 to-blush-50/30 p-6 shadow-soft">
               <p className="text-sm font-semibold text-ink-900">Hours</p>
               <ul className="mt-4 space-y-2 text-sm text-ink-700">
                 {site.hours.map((h) => (
@@ -159,7 +162,10 @@ export function Contact() {
             </div>
           </div>
 
-          <div id="callback-form" className="rounded-3xl border border-ink-100 bg-white p-6 shadow-soft scroll-mt-24">
+          <div
+            id="callback-form"
+            className="rounded-3xl border-2 border-blush-200 bg-white/95 p-6 shadow-glow backdrop-blur-sm scroll-mt-24 ring-1 ring-blush-100/80"
+          >
             <p className="text-sm font-semibold text-ink-900">Send a message</p>
             <p className="mt-1 text-sm text-ink-700">
               We’ll get back to you as soon as we can. To book by phone, use Call to book above.

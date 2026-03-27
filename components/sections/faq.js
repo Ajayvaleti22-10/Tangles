@@ -5,7 +5,7 @@ import { site } from '@/data/site';
 
 export function FAQ() {
   return (
-    <section className="bg-ink-50/60 border-y border-ink-100">
+    <section className="border-y border-teal-100/80 bg-gradient-to-b from-teal-50/50 via-white to-amber-50/40">
       <Container className="py-14 sm:py-20">
         <SectionHeader
           eyebrow="FAQ"

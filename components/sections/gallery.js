@@ -5,7 +5,10 @@ import { galleryPageImages } from '@/data/salon-photos';
 
 export function Gallery() {
   return (
-    <section id="gallery" className="bg-white">
+    <section
+      id="gallery"
+      className="border-y border-violet-100 bg-gradient-to-b from-violet-50/80 via-white to-coral-50/45"
+    >
       <Container className="py-14 sm:py-20">
         <SectionHeader
           eyebrow="Gallery"
@@ -17,7 +20,7 @@ export function Gallery() {
           {galleryPageImages.map((it, idx) => (
             <div
               key={it.src}
-              className="group relative aspect-[3/4] overflow-hidden rounded-3xl border border-ink-100 bg-ink-50 shadow-soft"
+              className="group relative aspect-[3/4] overflow-hidden rounded-3xl border-2 border-white bg-white shadow-soft ring-2 ring-blush-100/70"
             >
               <Image
                 src={it.src}

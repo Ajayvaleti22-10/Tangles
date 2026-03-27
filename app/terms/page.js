@@ -11,8 +11,9 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <article className="bg-white">
+    <article className="min-h-screen bg-gradient-to-b from-blush-50/90 via-white to-teal-50/40">
       <Container className="py-14 sm:py-20 max-w-3xl">
+        <div className="rounded-3xl border-2 border-blush-100 bg-white/90 p-8 shadow-soft backdrop-blur-sm ring-1 ring-violet-100/60 sm:p-10">
         <h1 className="text-3xl font-semibold text-ink-900">Terms &amp; Conditions</h1>
         <p className="mt-2 text-sm text-ink-600">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
@@ -76,6 +77,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-semibold text-ink-900 mt-8 mb-2">12. Contact</h2>
             <p>For questions about these Terms and Conditions, contact us through the Contact page on this website or call {site.phone}.</p>
           </section>
+        </div>
         </div>
       </Container>
     </article>

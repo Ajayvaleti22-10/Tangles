@@ -7,6 +7,12 @@ import { cn } from '@/lib/utils';
 export function Accordion({ items }) {
   const [open, setOpen] = useState(null);
 
+  const shells = [
+    'border-blush-200 bg-gradient-to-r from-blush-50/70 to-white',
+    'border-teal-200 bg-gradient-to-r from-teal-50/50 to-white',
+    'border-violet-200 bg-gradient-to-r from-violet-50/50 to-white'
+  ];
+
   return (
     <div className="space-y-3">
       {items.map((it, idx) => {
@@ -14,7 +20,7 @@ export function Accordion({ items }) {
         return (
           <div
             key={idx}
-            className="rounded-2xl border border-ink-200 bg-white shadow-soft"
+            className={cn('rounded-2xl border-2 shadow-soft', shells[idx % shells.length])}
           >
             <button
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"

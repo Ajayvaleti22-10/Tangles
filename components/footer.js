@@ -5,7 +5,7 @@ import { Instagram, MapPin, Phone } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t border-blush-100 bg-gradient-to-b from-white to-blush-50/30">
+    <footer className="border-t border-blush-100 bg-gradient-to-b from-teal-50/20 via-white to-violet-50/35">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
