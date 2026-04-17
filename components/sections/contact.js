@@ -14,6 +14,7 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const MAX_NAME = 100;
 const MAX_EMAIL = 254;
+const MAX_PHONE = 32;
 const MAX_MESSAGE = 5000;
 const SUBMIT_COOLDOWN_MS = 3000;
 
@@ -25,6 +26,7 @@ function trim(str, maxLen) {
 export function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [status, setStatus] = useState('idle'); // 'idle' | 'sending' | 'success' | 'error'
@@ -54,11 +56,12 @@ export function Contact() {
 
     const safeName = trim(name, MAX_NAME);
     const safeEmail = trim(email, MAX_EMAIL);
+    const safePhone = trim(phone, MAX_PHONE);
     const safeMessage = trim(message, MAX_MESSAGE);
 
-    if (!safeName || !safeEmail || !safeMessage) {
+    if (!safeName || !safeEmail || !safePhone || !safeMessage) {
       setStatus('error');
-      setErrorMessage('Please fill in name, email, and message.');
+      setErrorMessage('Please fill in name, email, phone number, and message.');
       return;
     }
 
@@ -66,6 +69,13 @@ export function Contact() {
     if (!emailRegex.test(safeEmail)) {
       setStatus('error');
       setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+
+    const phoneDigits = (safePhone.match(/\d/g) || []).length;
+    if (phoneDigits < 10) {
+      setStatus('error');
+      setErrorMessage('Please enter a valid phone number (at least 10 digits).');
       return;
     }
 
@@ -81,6 +91,7 @@ export function Contact() {
           access_key: accessKey,
           name: safeName,
           email: safeEmail,
+          phone: safePhone,
           message: safeMessage,
           subject: `${site.name} – Contact form: ${safeName}`,
           from_name: site.name,
@@ -94,6 +105,7 @@ export function Contact() {
         setStatus('success');
         setName('');
         setEmail('');
+        setPhone('');
         setMessage('');
         setAcceptedTerms(false);
       } else {
@@ -195,6 +207,19 @@ export function Contact() {
                   maxLength={MAX_EMAIL}
                   disabled={status === 'sending'}
                   autoComplete="email"
+                />
+              </div>
+              <div className="grid gap-2">
+                <label className="text-xs font-semibold text-ink-700">Phone</label>
+                <Input
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="319-363-6500"
+                  type="tel"
+                  required
+                  maxLength={MAX_PHONE}
+                  disabled={status === 'sending'}
+                  autoComplete="tel"
                 />
               </div>
               <div className="grid gap-2">
