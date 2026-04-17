@@ -47,9 +47,9 @@ export function Navbar() {
 
   return (
     <header className={cn('sticky top-0 z-50 transition', scrolled && 'backdrop-blur bg-white/90 border-b border-blush-100 shadow-sm')}>
-      <Container className="flex h-16 items-center justify-between">
+      <Container className="flex h-[4.5rem] sm:h-20 items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.svg" alt={`${site.name} logo`} width={168} height={44} className="h-10 w-auto object-contain" priority />
+          <Image src="/logo.svg" alt={`${site.name} logo`} width={168} height={44} className="h-12 sm:h-14 w-auto object-contain" priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-7">
@@ -92,7 +92,7 @@ export function Navbar() {
         <Container className="pt-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-              <Image src="/logo.svg" alt={`${site.name} logo`} width={168} height={44} className="h-10 w-auto object-contain" />
+              <Image src="/logo.svg" alt={`${site.name} logo`} width={168} height={44} className="h-12 w-auto object-contain" />
             </Link>
             <button
               className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-blush-200 bg-white"
