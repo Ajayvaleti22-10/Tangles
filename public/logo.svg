@@ -1,8 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
-  <title id="title">Tangles Salon Logo</title>
-  <desc id="desc">Tangles Salon wordmark with scissor symbol.</desc>
-  <rect width="360" height="96" fill="none"/>
-  <text x="18" y="28" fill="#111111" font-size="20" font-family="Georgia, 'Times New Roman', serif">✂</text>
-  <text x="18" y="62" fill="#111111" font-size="62" font-family="Georgia, 'Times New Roman', serif" font-weight="700" letter-spacing="-1.5">Tangles</text>
-  <text x="246" y="80" fill="#111111" font-size="42" font-family="Georgia, 'Times New Roman', serif" font-weight="500" letter-spacing="-0.4">Salon</text>
+<svg width="100%" viewBox="0 0 680 320" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Tangles Salon Logo</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Elegant logo for Tangles Salon featuring serif typography and a scissors icon</desc>
+
+  <defs>
+    
+  <mask id="imagine-text-gaps-gqibre" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="680" height="320" fill="white"/><rect x="180.0240478515625" y="107.70077514648438" width="319.95184326171875" height="97.31558990478516" fill="black" rx="2"/><rect x="274.3321533203125" y="215.5977325439453" width="131.3356704711914" height="28.021835327148438" fill="black" rx="2"/></mask></defs>
+
+  <text x="340" y="185" text-anchor="middle" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Playfair Display&quot;, Georgia, serif;font-size:82px;font-weight:700;text-anchor:middle;dominant-baseline:auto">Tangles</text>
+
+  <line x1="100" y1="205" x2="268" y2="205" mask="url(#imagine-text-gaps-gqibre)" style="fill:rgb(0, 0, 0);stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="412" y1="205" x2="580" y2="205" mask="url(#imagine-text-gaps-gqibre)" style="fill:rgb(0, 0, 0);stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <g transform="translate(307, 192)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <ellipse cx="-7" cy="-7" rx="6" ry="6" style="fill:none;stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="7" cy="-7" rx="6" ry="6" style="fill:none;stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="-2" y1="-2" x2="11" y2="18" style="fill:none;stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="2" y1="-2" x2="-11" y2="18" style="fill:none;stroke:rgb(26, 26, 26);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  </g>
+
+  <text x="340" y="237" text-anchor="middle" style="fill:rgb(26, 26, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Cormorant Garamond&quot;, &quot;Times New Roman&quot;, serif;font-size:22px;font-weight:300;text-anchor:middle;dominant-baseline:auto">SALON</text>
+
 </svg>

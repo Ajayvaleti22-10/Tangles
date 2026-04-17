@@ -9,7 +9,7 @@ export function Footer() {
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <Image src="/logo.png" alt={`${site.name} logo`} width={180} height={48} className="h-11 w-auto object-contain" />
+            <Image src="/logo.svg" alt={`${site.name} logo`} width={180} height={48} className="h-11 w-auto object-contain" />
             <p className="mt-3 text-sm text-ink-700 max-w-sm">{site.description}</p>
           </div>
 
